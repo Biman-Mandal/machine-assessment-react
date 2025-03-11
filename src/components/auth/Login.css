@@ -1,0 +1,157 @@
+/* General Styles */
+.login-header {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Form Container */
+.login-form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Container */
+.login-input-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.login-label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input Fields */
+.login-input-email, 
+.login-input-password {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.login-input-email:focus, 
+.login-input-password:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Error Input Styling */
+.input-error {
+  border: 1px solid red !important;
+  background-color: #ffe6e6;
+}
+
+/* Success & Error Messages */
+.success-message {
+  font-weight: bold;
+  color: green;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  font-size: 14px;
+  color: red;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Buttons */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+.login-cancelbtn {
+  background-color: #f44336;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.login-cancelbtn:hover {
+  background-color: #e53935;
+}
+
+/* Password & Links */
+.login-psw {
+  float: right;
+  font-size: 14px;
+}
+
+.login-psw a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.login-psw a:hover {
+  text-decoration: underline;
+}
+
+/* Checkbox Container */
+.login-checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.login-checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.login-checkbox-container label {
+  font-size: 14px;
+}
+
+/* Footer Links */
+.login-container a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+  .login-form-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .login-header {
+    font-size: 20px;
+  }
+
+  .login-button, .login-cancelbtn {
+    font-size: 14px;
+  }
+}
