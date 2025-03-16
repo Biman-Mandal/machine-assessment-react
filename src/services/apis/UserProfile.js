@@ -7,30 +7,28 @@ export const profileApi = createApi({
   reducerPath: 'profileApi',
   baseQuery: fetchBaseQuery({
     baseUrl: BASE_URL,
+    credentials: 'include',
     prepareHeaders: (headers) => {
-      const token = localStorage.getItem('userToken');
-
-      console.log('Token:', token); // Debugging (remove in production)
-
+      let token = localStorage.getItem('userToken');
       if (token) {
+        token = token.replace(/^"|"$/g, '');
         headers.set('Authorization', `Bearer ${token}`);
       }
-      headers.set('Content-Type', 'application/json'); // Ensure JSON requests
-
+      headers.set('Content-Type', 'application/json');
       return headers;
     },
   }),
   endpoints: (builder) => ({
     updateUser: builder.mutation({
       query: (data) => ({
-        url: '/api/user/update', // Ensure leading slash
+        url: '/api/user/update',
         method: 'PUT',
         body: data,
       }),
     }),
     getProfile: builder.query({
       query: () => ({
-        url: '/api/user/profile', // Ensure leading slash
+        url: '/api/user/profile',
         method: 'GET',
       }),
     }),

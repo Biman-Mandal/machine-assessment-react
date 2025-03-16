@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import store from "./services/redux/Store";
 import AppRoutes from "./routes/AppRoutes";
 import { AuthProvider } from "./utils/AuthContext";
-import { useOnlineStatus } from "./components/hooks/useOnlineStatus";
+import useOnlineStatus from "./components/hooks/useOnlineStatus";
 import { SnackbarProvider, enqueueSnackbar } from "notistack";
 
 export default function App() {
